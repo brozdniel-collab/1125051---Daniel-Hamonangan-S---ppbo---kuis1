@@ -109,12 +109,12 @@ class SmartTv extends Attribute implements Connectable{
         return "Smart TV";
     }
 
-    public void printData(){
+    @Override
+    public void printdata(){
         super.printdata();
         System.out.print("| Koneksi :");
         Koneksi();
         System.out.print("| Channel " + channel + "| Volume: "+volume);
-
     }
 
 }
@@ -141,13 +141,12 @@ class SmartSpeaker extends Attribute implements  Connectable{
     String jenisBarang(){
         return "Smart Speaker";
     }
-    
-    public void printData(){
+    @Override
+    public void printdata(){
         super.printdata();
         System.out.print("| Koneksi :");
         Koneksi();
         System.out.print("| Volume: "+volume);
-
     }
 }
 class SmartDoorLock extends Attribute implements Lockable{
